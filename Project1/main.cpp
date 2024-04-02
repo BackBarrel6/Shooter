@@ -10,7 +10,7 @@ sf::Font font;
 
 int main() {
     Player player;
-    Bullet bullet(player.bulletspeed),bulletref=bullet; // Initial speed of bullet
+    Bullet bullet(player.bulletspeed),&bulletref=bullet; // Initial speed of bullet
     player.playerent.setRadius(10);
     player.posx.setCharacterSize(12);
     player.posy.setCharacterSize(12);
