@@ -37,7 +37,7 @@ void keyboard_input(Player& player, sf::RenderWindow& window, std::vector<Bullet
 
     if(player.fireClock.getElapsedTime() >= player.fireRate && sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
     {
-        Bullet bullet(1.0f); // Speed of the bullet
+        Bullet bullet(player.bulletspeed); // Speed of the bullet
         bullet.position = player.playerent.getPosition();
         bullets.push_back(bullet);
 

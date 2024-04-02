@@ -10,7 +10,7 @@ sf::Font font;
 
 int main() {
     Player player;
-    Bullet bullet(1.0f),bulletref=bullet; // Initial speed of bullet
+    Bullet bullet(player.bulletspeed),bulletref=bullet; // Initial speed of bullet
     player.playerent.setRadius(10);
     player.posx.setCharacterSize(12);
     player.posy.setCharacterSize(12);
@@ -20,7 +20,7 @@ int main() {
     if (!font.loadFromFile("C:/Users/flori/Downloads/ARIAL.TTF")) {
         return EXIT_FAILURE;
     }
-
+        
     player.posx.setFont(font);
     player.posy.setFont(font);
     player.playerent.setFillColor(sf::Color::Green);
@@ -40,7 +40,6 @@ int main() {
             bullet.update();
         }
     }
-
 
     return 0;
 }
